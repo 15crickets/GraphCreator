@@ -7,6 +7,7 @@ void print(int adjacency [20][20], int numVertex, char names [20]);
 
 int main(){
   bool stillRunning = true;
+  int numVertex = 0; 
   
   while(stillRunning == true){
     cout << "What would you like to do? ADDVERTEX, ADDEDGE, REMOVEVERTEX, REMOVEEDGE, PRINT, or QUIT" << endl;
@@ -20,16 +21,17 @@ int main(){
 	adjacency[i][j] = 0;
       }
     }
-    int numVertex = 0;
     if(strcmp(choice, "ADDVERTEX") == 0){
       cout << "Enter a letter that will serve as the name for this vertex" << endl;
       char name;
       cin >> name;
       cin.get();
       names[numVertex] = name;
+      cout << names[0] << endl;
       numVertex++;
     }
     else if(strcmp(choice, "ADDEDGE") == 0){
+      
 
     }
     else if(strcmp(choice, "REMOVEVERTEX") == 0){
@@ -52,6 +54,7 @@ int main(){
 
 
 void print(int adjacency [20][20], int numVertex, char names[20]){
+  cout << "HI" << endl;
   for(int i = 0; i < numVertex; i++){
     cout << names[i] << "   ";
   }
